@@ -6,7 +6,8 @@ import Observation
 
 /// Bridges existing shortcut/action logic to the new LayerEditor renderer.
 /// Ports MarkdownEditorNSTextView.handleAction() to the new stack.
-final class LayerEditorViewModel: @Observable {
+@Observable
+final class LayerEditorViewModel {
 
     var textStorage: EditorTextStorage!
     var renderer: EditorRenderer!
@@ -44,9 +45,17 @@ final class LayerEditorViewModel: @Observable {
         case .deselectLine, .deselectWord, .deselectSentence, .deselectParagraph, .deselectList:
             deselect(); return true
         case .foldBlock:
-            renderer.handleFoldAction(); return true
+            let foldLine = textStorage.cursorOffset
+            let lines = renderer.cachedLineMetrics
+            let idx = lines.firstIndex { foldLine >= $0.range.location && foldLine <= NSMaxRange($0.range) } ?? 0
+            textStorage.foldAtCursor(lines: lines, cursorLine: idx)
+            renderer.rebuildLayout(); return true
         case .unfoldBlock:
-            renderer.handleUnfoldAction(); return true
+            let unfoldLine = textStorage.cursorOffset
+            let ulLines = renderer.cachedLineMetrics
+            let uIdx = ulLines.firstIndex { unfoldLine >= $0.range.location && unfoldLine <= NSMaxRange($0.range) } ?? 0
+            textStorage.unfoldAtCursor(cursorLine: uIdx, lines: ulLines)
+            renderer.rebuildLayout(); return true
         case .foldAll:
             textStorage.foldAll(lines: renderer.cachedLineMetrics); return true
         case .unfoldAll:
@@ -211,13 +220,13 @@ final class LayerEditorViewModel: @Observable {
     private func indentOrOutdent(delta: Int) {
         let ns = textStorage.rawText as NSString
         let sel = textStorage.selection
-        let indentStr = editorSettings?.indentUnit ?? "    "
+        let indentStr = editorSettings?.indentUnit.string ?? "    "
         let indentLen = (indentStr as NSString).length
 
         let startLineRange = ns.lineRange(for: NSRange(location: sel.start, length: 0))
         let endLineRange: NSRange = {
             if sel.length == 0 { return startLineRange }
-            let endLoc = max(sel.start, NSMaxRange(sel) - 1)
+            let endLoc = max(sel.start, sel.end - 1)
             return ns.lineRange(for: NSRange(location: endLoc, length: 0))
         }()
         let blockRange = NSRange(location: startLineRange.location, length: NSMaxRange(endLineRange) - startLineRange.location)
@@ -244,7 +253,7 @@ final class LayerEditorViewModel: @Observable {
         let sel = textStorage.selection
         let range = NSRange(location: sel.start, length: max(0, sel.end - sel.start))
         let result = MarkdownFormatter.apply(format, to: textStorage.rawText, selectedRange: range,
-                                             indentUnit: editorSettings?.indentUnit ?? "    ")
+                                             indentUnit: editorSettings?.indentUnit.string ?? "    ")
         _ = textStorage.replaceText(range: NSRange(location: 0, length: (textStorage.rawText as NSString).length), with: result.text)
         textStorage.setSelection(SelectionRange(start: result.selectedRange.location, end: NSMaxRange(result.selectedRange)))
         renderer.refresh()
