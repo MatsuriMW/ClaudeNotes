@@ -29,6 +29,14 @@ final class LineFragmentLayer: CALayer {
         didSet { setNeedsDisplay() }
     }
 
+    var wikiLinkColor: NSColor = .systemBlue {
+        didSet { setNeedsDisplay() }
+    }
+
+    var isWikiLink: Bool = false {
+        didSet { setNeedsDisplay() }
+    }
+
     override init() {
         super.init()
         commonInit()
@@ -69,7 +77,7 @@ final class LineFragmentLayer: CALayer {
         ctx.scaleBy(x: 1.0, y: -1.0)
 
         // Set text color
-        ctx.setFillColor(textColor.cgColor)
+        ctx.setFillColor(isWikiLink ? wikiLinkColor.cgColor : textColor.cgColor)
 
         // Position pen at start of line
         let penOffset = CTLineGetOffsetForStringIndex(line, 0, nil)

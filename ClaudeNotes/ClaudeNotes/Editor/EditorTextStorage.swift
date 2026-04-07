@@ -273,6 +273,18 @@ final class EditorTextStorage {
         }
     }
 
+    // MARK: - Wiki Link Detection
+
+    private static let wikiLinkRegex = try! NSRegularExpression(pattern: "\\[\\[.+?\\]\\]")
+
+    func wikiLinkRanges(in range: NSRange) -> [NSRange] {
+        let ns = rawText as NSString
+        let safeRange = NSIntersectionRange(range, NSRange(location: 0, length: ns.length))
+        guard safeRange.length > 0 else { return [] }
+        let matches = wikiLinkRegex.matches(in: ns.substring(with: safeRange), range: NSRange(location: 0, length: safeRange.length))
+        return matches.map { NSRange(location: $0.range.location + safeRange.location, length: $0.range.length) }
+    }
+
     // MARK: - Line Map (from raw text, fold-aware)
 
     /// Build line metrics from rawText, respecting fold state.
