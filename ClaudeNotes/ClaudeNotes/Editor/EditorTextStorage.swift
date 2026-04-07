@@ -1,12 +1,14 @@
 import Foundation
 import AppKit
+import CoreText
 import Observation
 
 // MARK: - EditorTextStorage
 
 /// Core text model: holds raw text, fold state, cursor, and selection.
 /// All mutations go through this class so it can emit change notifications.
-final class EditorTextStorage: @Observable {
+@Observable
+final class EditorTextStorage {
 
     // MARK: - Public State
 
@@ -319,15 +321,16 @@ final class EditorTextStorage: @Observable {
             CGSize(width: width, height: CGFloat.greatestFiniteMagnitude), nil
         )
         let path = CGPath(rect: CGRect(x: 0, y: -suggestedSize.height, width: width, height: suggestedSize.height), transform: nil)
-        guard let frame = CTFramesetterCreateFrame(framesetter, fullRange, path, nil) else { return fragments }
+        let frame = CTFramesetterCreateFrame(framesetter, fullRange, path, nil)
 
-        let lineCount = CTFrameGetLines(frame)
-        for i in 0..<lineCount {
-            guard let line = CTFrameGetLine(frame, CFRange(location: CFIndex(i), length: 0)) else { continue }
-            let lineRange = CTLineGetStringRange(line)
-            let ascent = CTLineGetTypographicAscent(line)
-            let descent = CTLineGetTypographicDescent(line)
-            let bounds = CTLineGetBoundsWithOptions(line, [])
+        let lines = CTFrameGetLines(frame) as! [CTLine]
+        for i in 0..<lines.count {
+            let line = lines[i]
+            let lineRange = CoreText.CTLineGetStringRange(line)
+            var ascent: CGFloat = 0
+            var descent: CGFloat = 0
+            _ = CoreText.CTLineGetTypographicBounds(line, &ascent, &descent, nil)
+            let bounds = CoreText.CTLineGetBoundsWithOptions(line, [])
             let fragmentText = (text as NSString).substring(with: NSRange(location: lineRange.location, length: lineRange.length))
             var origins = [CGPoint.zero]
             CTFrameGetLineOrigins(frame, CFRange(location: 0, length: 0), &origins)
