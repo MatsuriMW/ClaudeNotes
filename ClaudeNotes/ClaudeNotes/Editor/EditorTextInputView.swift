@@ -1,16 +1,5 @@
 import AppKit
 
-// MARK: - EditorRenderer (forward declaration — implemented in Task 7)
-// Members listed here must match the actual EditorRenderer implementation in Task 7.
-
-final class EditorRenderer {
-    var outlinerLayer: OutlinerLayer { OutlinerLayer() }
-    func refresh() {}
-    func cursorRect(for offset: Int) -> NSRect? { nil }
-    func characterIndex(for pt: CGPoint) -> Int? { nil }
-    func handleKeyEvent(_ event: NSEvent) {}
-}
-
 // MARK: - EditorTextInputView
 
 /// NSView subclass that implements NSTextInputClient to receive keyboard events and IME.
