@@ -20,7 +20,10 @@ final class EditorRenderer: NSObject {
     var lineHeightMultiple: CGFloat = 1.4
     var typewriterMode: Bool = false
     var typewriterScrollFraction: CGFloat = 0.5
-    var typewriterFocusMode: EditorSettings.TypewriterFocusMode = .off
+    enum TypewriterFocusMode: Int {
+        case off = 0, line = 1, sentence = 2, paragraph = 3
+    }
+    var typewriterFocusMode: TypewriterFocusMode = .off
     var typewriterMarkLine: Bool = false
 
     // MARK: - Layers
