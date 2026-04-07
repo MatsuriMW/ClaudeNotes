@@ -124,7 +124,7 @@ final class EditorRenderer: NSObject {
 
     // MARK: - Layout
 
-    private func rebuildLayout() {
+    func rebuildLayout() {
         cachedLineMetrics = textStorage.buildLineMetrics(font: font, width: contentWidth)
         outlinerLayer.lineMetrics = cachedLineMetrics
         outlinerLayer.font = font

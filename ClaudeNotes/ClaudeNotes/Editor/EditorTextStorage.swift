@@ -281,7 +281,7 @@ final class EditorTextStorage {
         let ns = rawText as NSString
         let safeRange = NSIntersectionRange(range, NSRange(location: 0, length: ns.length))
         guard safeRange.length > 0 else { return [] }
-        let matches = wikiLinkRegex.matches(in: ns.substring(with: safeRange), range: NSRange(location: 0, length: safeRange.length))
+        let matches = Self.wikiLinkRegex.matches(in: ns.substring(with: safeRange), range: NSRange(location: 0, length: safeRange.length))
         return matches.map { NSRange(location: $0.range.location + safeRange.location, length: $0.range.length) }
     }
 

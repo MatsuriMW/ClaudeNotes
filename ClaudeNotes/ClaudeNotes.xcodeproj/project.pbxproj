@@ -1,0 +1,704 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		332EF0E02F7A44BB0074E777 /* ShortcutsHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332EF0DF2F7A44BB0074E777 /* ShortcutsHelpView.swift */; };
+		33CF38132F746CBB0072BD61 /* SwiftTerm in Frameworks */ = {isa = PBXBuildFile; productRef = 33CF38122F746CBB0072BD61 /* SwiftTerm */; };
+		A10000010000000000000001 /* ClaudeNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000001 /* ClaudeNotesApp.swift */; };
+		A10000020000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000020000000000000002 /* ContentView.swift */; };
+		A10000030000000000000003 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000030000000000000003 /* Note.swift */; };
+		A10000040000000000000004 /* NoteFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000040000000000000004 /* NoteFolder.swift */; };
+		A10000050000000000000005 /* AIAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000050000000000000005 /* AIAnalysis.swift */; };
+		A10000060000000000000006 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000060000000000000006 /* SidebarView.swift */; };
+		A10000070000000000000007 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000070000000000000007 /* NoteListView.swift */; };
+		A10000080000000000000008 /* NoteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000080000000000000008 /* NoteRow.swift */; };
+		A10000090000000000000009 /* NoteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000090000000000000009 /* NoteEditorView.swift */; };
+		A1000010000000000000000A /* EditorToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000010000000000000000A /* EditorToolbar.swift */; };
+		A1000011000000000000000B /* MarkdownPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000011000000000000000B /* MarkdownPreviewView.swift */; };
+		A1000012000000000000000C /* AIInsightsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000012000000000000000C /* AIInsightsPanel.swift */; };
+		A1000013000000000000000D /* AILoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000013000000000000000D /* AILoadingView.swift */; };
+		A1000014000000000000000E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000014000000000000000E /* SettingsView.swift */; };
+		A1000015000000000000000F /* AIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000015000000000000000F /* AIService.swift */; };
+		A10000160000000000000010 /* AIPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000160000000000000010 /* AIPrompts.swift */; };
+		A10000170000000000000011 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000170000000000000011 /* KeychainService.swift */; };
+		A10000180000000000000012 /* NoteEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000180000000000000012 /* NoteEditorViewModel.swift */; };
+		A10000190000000000000013 /* AIInsightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000190000000000000013 /* AIInsightsViewModel.swift */; };
+		A1000020000000000000001A /* Date+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000020000000000000001A /* Date+Formatting.swift */; };
+		A10000210000000000000014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20000210000000000000014 /* Assets.xcassets */; };
+		A10000220000000000000015 /* PreviewSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000220000000000000015 /* PreviewSampleData.swift */; };
+		A10000230000000000000020 /* LLMProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000230000000000000020 /* LLMProvider.swift */; };
+		A10000240000000000000021 /* LLMWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000240000000000000021 /* LLMWebView.swift */; };
+		A10000250000000000000022 /* ChatBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000250000000000000022 /* ChatBrowserView.swift */; };
+		A10000260000000000000023 /* ChatProviderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000260000000000000023 /* ChatProviderListView.swift */; };
+		A10000270000000000000024 /* AIChatPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000270000000000000024 /* AIChatPanel.swift */; };
+		A10000280000000000000025 /* SlashCommandPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000280000000000000025 /* SlashCommandPopup.swift */; };
+		A10000290000000000000026 /* WebChatInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000290000000000000026 /* WebChatInjector.swift */; };
+		A100002A0000000000000027 /* PanguSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200002A0000000000000027 /* PanguSpacing.swift */; };
+		A100002B0000000000000028 /* MarkdownFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200002B0000000000000028 /* MarkdownFormatter.swift */; };
+		A100002C0000000000000029 /* MarkdownTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200002C0000000000000029 /* MarkdownTextView.swift */; };
+		A100002D000000000000002A /* ShortcutSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200002D000000000000002A /* ShortcutSettings.swift */; };
+		A100002E000000000000002B /* ShortcutSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200002E000000000000002B /* ShortcutSettingsView.swift */; };
+		A100002F000000000000002C /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200002F000000000000002C /* MarkdownRenderer.swift */; };
+		A1000030000000000000002D /* ClaudeTerminalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000030000000000000002D /* ClaudeTerminalView.swift */; };
+		A1000031000000000000002E /* VaultSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000031000000000000002E /* VaultSearchView.swift */; };
+		A1000032000000000000002F /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000032000000000000002F /* TaskItem.swift */; };
+		A10000330000000000000030 /* TaskExtractionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000330000000000000030 /* TaskExtractionService.swift */; };
+		A10000340000000000000031 /* KanbanBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000340000000000000031 /* KanbanBoardView.swift */; };
+		A10000350000000000000032 /* NoteVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000350000000000000032 /* NoteVersion.swift */; };
+		A10000360000000000000033 /* VersionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000360000000000000033 /* VersionHistoryView.swift */; };
+		A10000370000000000000034 /* EditorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000370000000000000034 /* EditorSettings.swift */; };
+		A10000380000000000000035 /* EditorSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000380000000000000035 /* EditorSettingsView.swift */; };
+		A10000390000000000000036 /* EditorStateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000390000000000000036 /* EditorStateStore.swift */; };
+		A100003A0000000000000037 /* UserPersona.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200003A0000000000000037 /* UserPersona.swift */; };
+		A100003A00000000000019D438B9895 /* AIProviderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200003A00000000000019D438B9895 /* AIProviderSettings.swift */; };
+		A100003B0000000000000038 /* PersonaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200003B0000000000000038 /* PersonaView.swift */; };
+		A100003C000000000000003C /* InboxModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200003C000000000000003C /* InboxModels.swift */; };
+		A100003D000000000000003D /* InboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200003D000000000000003D /* InboxService.swift */; };
+		A100003E000000000000003E /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200003E000000000000003E /* InboxView.swift */; };
+		A100003F000000000000003F /* LibraryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200003F000000000000003F /* LibraryModels.swift */; };
+		A10000400000000000000040 /* FileNoteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000400000000000000040 /* FileNoteEditorView.swift */; };
+		A10000410000000000000041 /* MetadataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000410000000000000041 /* MetadataService.swift */; };
+		A10000420000000000000042 /* MetadataGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000420000000000000042 /* MetadataGeneratorView.swift */; };
+		A10000430000000000000043 /* OutlinePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000430000000000000043 /* OutlinePanelView.swift */; };
+		A10000440000000000000044 /* ExternalSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000440000000000000044 /* ExternalSearch.swift */; };
+		A10000450000000000000045 /* PlatformRewrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000450000000000000045 /* PlatformRewrite.swift */; };
+		A10000460000000000000046 /* ExternalSearchSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000460000000000000046 /* ExternalSearchSettingsView.swift */; };
+		A10000470000000000000047 /* PlatformRewriteSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000470000000000000047 /* PlatformRewriteSettingsView.swift */; };
+		A10000480000000000000048 /* RewriteResultPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000480000000000000048 /* RewriteResultPanel.swift */; };
+		A10000490000000000000049 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000490000000000000049 /* NotificationService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		332EF0DF2F7A44BB0074E777 /* ShortcutsHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsHelpView.swift; sourceTree = "<group>"; };
+		A20000010000000000000001 /* ClaudeNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeNotesApp.swift; sourceTree = "<group>"; };
+		A20000020000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A20000030000000000000003 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		A20000040000000000000004 /* NoteFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFolder.swift; sourceTree = "<group>"; };
+		A20000050000000000000005 /* AIAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAnalysis.swift; sourceTree = "<group>"; };
+		A20000060000000000000006 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		A20000070000000000000007 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
+		A20000080000000000000008 /* NoteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRow.swift; sourceTree = "<group>"; };
+		A20000090000000000000009 /* NoteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditorView.swift; sourceTree = "<group>"; };
+		A2000010000000000000000A /* EditorToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorToolbar.swift; sourceTree = "<group>"; };
+		A2000011000000000000000B /* MarkdownPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownPreviewView.swift; sourceTree = "<group>"; };
+		A2000012000000000000000C /* AIInsightsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIInsightsPanel.swift; sourceTree = "<group>"; };
+		A2000013000000000000000D /* AILoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AILoadingView.swift; sourceTree = "<group>"; };
+		A2000014000000000000000E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A2000015000000000000000F /* AIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIService.swift; sourceTree = "<group>"; };
+		A20000160000000000000010 /* AIPrompts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIPrompts.swift; sourceTree = "<group>"; };
+		A20000170000000000000011 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		A20000180000000000000012 /* NoteEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditorViewModel.swift; sourceTree = "<group>"; };
+		A20000190000000000000013 /* AIInsightsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIInsightsViewModel.swift; sourceTree = "<group>"; };
+		A2000020000000000000001A /* Date+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatting.swift"; sourceTree = "<group>"; };
+		A20000210000000000000014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A20000220000000000000015 /* PreviewSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSampleData.swift; sourceTree = "<group>"; };
+		A20000230000000000000016 /* ClaudeNotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClaudeNotes.entitlements; sourceTree = "<group>"; };
+		A20000230000000000000020 /* LLMProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMProvider.swift; sourceTree = "<group>"; };
+		A20000240000000000000021 /* LLMWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMWebView.swift; sourceTree = "<group>"; };
+		A20000250000000000000022 /* ChatBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBrowserView.swift; sourceTree = "<group>"; };
+		A20000260000000000000023 /* ChatProviderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatProviderListView.swift; sourceTree = "<group>"; };
+		A20000270000000000000024 /* AIChatPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatPanel.swift; sourceTree = "<group>"; };
+		A20000280000000000000025 /* SlashCommandPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlashCommandPopup.swift; sourceTree = "<group>"; };
+		A20000290000000000000026 /* WebChatInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebChatInjector.swift; sourceTree = "<group>"; };
+		A200002A0000000000000027 /* PanguSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanguSpacing.swift; sourceTree = "<group>"; };
+		A200002B0000000000000028 /* MarkdownFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownFormatter.swift; sourceTree = "<group>"; };
+		A200002C0000000000000029 /* MarkdownTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTextView.swift; sourceTree = "<group>"; };
+		A200002D000000000000002A /* ShortcutSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutSettings.swift; sourceTree = "<group>"; };
+		A200002E000000000000002B /* ShortcutSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutSettingsView.swift; sourceTree = "<group>"; };
+		A200002F000000000000002C /* MarkdownRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownRenderer.swift; sourceTree = "<group>"; };
+		A2000030000000000000002D /* ClaudeTerminalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeTerminalView.swift; sourceTree = "<group>"; };
+		A2000031000000000000002E /* VaultSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultSearchView.swift; sourceTree = "<group>"; };
+		A2000032000000000000002F /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
+		A20000330000000000000030 /* TaskExtractionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskExtractionService.swift; sourceTree = "<group>"; };
+		A20000340000000000000031 /* KanbanBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanbanBoardView.swift; sourceTree = "<group>"; };
+		A20000350000000000000032 /* NoteVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVersion.swift; sourceTree = "<group>"; };
+		A20000360000000000000033 /* VersionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionHistoryView.swift; sourceTree = "<group>"; };
+		A20000370000000000000034 /* EditorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorSettings.swift; sourceTree = "<group>"; };
+		A20000380000000000000035 /* EditorSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorSettingsView.swift; sourceTree = "<group>"; };
+		A20000390000000000000036 /* EditorStateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorStateStore.swift; sourceTree = "<group>"; };
+		A200003A0000000000000037 /* UserPersona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPersona.swift; sourceTree = "<group>"; };
+		A200003A00000000000019D438B9895 /* AIProviderSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProviderSettings.swift; sourceTree = "<group>"; };
+		A200003B0000000000000038 /* PersonaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaView.swift; sourceTree = "<group>"; };
+		A200003C000000000000003C /* InboxModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxModels.swift; sourceTree = "<group>"; };
+		A200003D000000000000003D /* InboxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxService.swift; sourceTree = "<group>"; };
+		A200003E000000000000003E /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
+		A200003F000000000000003F /* LibraryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryModels.swift; sourceTree = "<group>"; };
+		A20000400000000000000040 /* FileNoteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNoteEditorView.swift; sourceTree = "<group>"; };
+		A20000410000000000000041 /* MetadataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataService.swift; sourceTree = "<group>"; };
+		A20000420000000000000042 /* MetadataGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataGeneratorView.swift; sourceTree = "<group>"; };
+		A20000430000000000000043 /* OutlinePanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinePanelView.swift; sourceTree = "<group>"; };
+		A20000440000000000000044 /* ExternalSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalSearch.swift; sourceTree = "<group>"; };
+		A20000450000000000000045 /* PlatformRewrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformRewrite.swift; sourceTree = "<group>"; };
+		A20000460000000000000046 /* ExternalSearchSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalSearchSettingsView.swift; sourceTree = "<group>"; };
+		A20000470000000000000047 /* PlatformRewriteSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformRewriteSettingsView.swift; sourceTree = "<group>"; };
+		A20000480000000000000048 /* RewriteResultPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewriteResultPanel.swift; sourceTree = "<group>"; };
+		A20000490000000000000049 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		A30000010000000000000001 /* ClaudeNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClaudeNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A40000010000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33CF38132F746CBB0072BD61 /* SwiftTerm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77720F1A945D339075C4DE34 /* Kanban */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Kanban;
+			sourceTree = "<group>";
+		};
+		A50000010000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A50000020000000000000002 /* ClaudeNotes */,
+				A50000030000000000000003 /* Products */,
+				77720F1A945D339075C4DE34 /* Kanban */,
+				77720F1A945D339075C4DE34 /* Kanban */,
+			);
+			sourceTree = "<group>";
+		};
+		A50000020000000000000002 /* ClaudeNotes */ = {
+			isa = PBXGroup;
+			children = (
+				A20000230000000000000016 /* ClaudeNotes.entitlements */,
+				A50000040000000000000004 /* App */,
+				A50000050000000000000005 /* Models */,
+				A50000060000000000000006 /* Views */,
+				A5000013000000000000000D /* Services */,
+				A5000014000000000000000E /* ViewModels */,
+				A5000015000000000000000F /* Extensions */,
+				A50000160000000000000010 /* Resources */,
+				A50000170000000000000011 /* Preview Content */,
+			);
+			path = ClaudeNotes;
+			sourceTree = "<group>";
+		};
+		A50000030000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A30000010000000000000001 /* ClaudeNotes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A50000040000000000000004 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A20000010000000000000001 /* ClaudeNotesApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A50000050000000000000005 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A20000030000000000000003 /* Note.swift */,
+				A20000040000000000000004 /* NoteFolder.swift */,
+				A20000050000000000000005 /* AIAnalysis.swift */,
+				A20000230000000000000020 /* LLMProvider.swift */,
+				A200002D000000000000002A /* ShortcutSettings.swift */,
+				A2000032000000000000002F /* TaskItem.swift */,
+				A20000350000000000000032 /* NoteVersion.swift */,
+				A20000370000000000000034 /* EditorSettings.swift */,
+				A20000390000000000000036 /* EditorStateStore.swift */,
+				A200003A00000000000019D438B9895 /* AIProviderSettings.swift */,
+				A200003A0000000000000037 /* UserPersona.swift */,
+				A200003C000000000000003C /* InboxModels.swift */,
+				A200003F000000000000003F /* LibraryModels.swift */,
+				A20000440000000000000044 /* ExternalSearch.swift */,
+				A20000450000000000000045 /* PlatformRewrite.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A50000060000000000000006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				332EF0DF2F7A44BB0074E777 /* ShortcutsHelpView.swift */,
+				A20000020000000000000002 /* ContentView.swift */,
+				A50000070000000000000007 /* Sidebar */,
+				A50000080000000000000008 /* NoteList */,
+				A50000090000000000000009 /* Editor */,
+				A5000010000000000000000A /* AI */,
+				A50000180000000000000012 /* Chat */,
+				A5000011000000000000000B /* Settings */,
+				A5000019000000000000002E /* Search */,
+				A500001A0000000000000032 /* Kanban */,
+				A200003B0000000000000038 /* PersonaView.swift */,
+				A500001C000000000000003F /* Inbox */,
+				A500001D000000000000004D /* FileLibrary */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A50000070000000000000007 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				A20000060000000000000006 /* SidebarView.swift */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		A50000080000000000000008 /* NoteList */ = {
+			isa = PBXGroup;
+			children = (
+				A20000070000000000000007 /* NoteListView.swift */,
+				A20000080000000000000008 /* NoteRow.swift */,
+			);
+			path = NoteList;
+			sourceTree = "<group>";
+		};
+		A50000090000000000000009 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				A20000090000000000000009 /* NoteEditorView.swift */,
+				A2000010000000000000000A /* EditorToolbar.swift */,
+				A2000011000000000000000B /* MarkdownPreviewView.swift */,
+				A200002C0000000000000029 /* MarkdownTextView.swift */,
+				A20000360000000000000033 /* VersionHistoryView.swift */,
+				A20000420000000000000042 /* MetadataGeneratorView.swift */,
+				A20000430000000000000043 /* OutlinePanelView.swift */,
+				A20000480000000000000048 /* RewriteResultPanel.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		A5000010000000000000000A /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				A2000012000000000000000C /* AIInsightsPanel.swift */,
+				A2000013000000000000000D /* AILoadingView.swift */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
+		A5000011000000000000000B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A2000014000000000000000E /* SettingsView.swift */,
+				A200002E000000000000002B /* ShortcutSettingsView.swift */,
+				A20000380000000000000035 /* EditorSettingsView.swift */,
+				A20000460000000000000046 /* ExternalSearchSettingsView.swift */,
+				A20000470000000000000047 /* PlatformRewriteSettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A5000013000000000000000D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A2000015000000000000000F /* AIService.swift */,
+				A20000160000000000000010 /* AIPrompts.swift */,
+				A20000170000000000000011 /* KeychainService.swift */,
+				A20000290000000000000026 /* WebChatInjector.swift */,
+				A200002A0000000000000027 /* PanguSpacing.swift */,
+				A200002B0000000000000028 /* MarkdownFormatter.swift */,
+				A200002F000000000000002C /* MarkdownRenderer.swift */,
+				A20000330000000000000030 /* TaskExtractionService.swift */,
+				A200003D000000000000003D /* InboxService.swift */,
+				A20000410000000000000041 /* MetadataService.swift */,
+				A20000490000000000000049 /* NotificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A5000014000000000000000E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A20000180000000000000012 /* NoteEditorViewModel.swift */,
+				A20000190000000000000013 /* AIInsightsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A5000015000000000000000F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A2000020000000000000001A /* Date+Formatting.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A50000160000000000000010 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A20000210000000000000014 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A50000170000000000000011 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A20000220000000000000015 /* PreviewSampleData.swift */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A50000180000000000000012 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				A2000030000000000000002D /* ClaudeTerminalView.swift */,
+				A20000270000000000000024 /* AIChatPanel.swift */,
+				A20000280000000000000025 /* SlashCommandPopup.swift */,
+				A20000240000000000000021 /* LLMWebView.swift */,
+				A20000250000000000000022 /* ChatBrowserView.swift */,
+				A20000260000000000000023 /* ChatProviderListView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		A5000019000000000000002E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A2000031000000000000002E /* VaultSearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		A500001A0000000000000032 /* Kanban */ = {
+			isa = PBXGroup;
+			children = (
+				A20000340000000000000031 /* KanbanBoardView.swift */,
+			);
+			path = Kanban;
+			sourceTree = "<group>";
+		};
+		A500001C000000000000003F /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				A200003E000000000000003E /* InboxView.swift */,
+			);
+			path = Inbox;
+			sourceTree = "<group>";
+		};
+		A500001D000000000000004D /* FileLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				A20000400000000000000040 /* FileNoteEditorView.swift */,
+			);
+			path = FileLibrary;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A60000010000000000000001 /* ClaudeNotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80000010000000000000001 /* Build configuration list for PBXNativeTarget "ClaudeNotes" */;
+			buildPhases = (
+				A70000010000000000000001 /* Sources */,
+				A40000010000000000000001 /* Frameworks */,
+				A70000020000000000000002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClaudeNotes;
+			productName = ClaudeNotes;
+			productReference = A30000010000000000000001 /* ClaudeNotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A90000010000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					A60000010000000000000001 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = A80000020000000000000002 /* Build configuration list for PBXProject "ClaudeNotes" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				"zh-Hans",
+				Base,
+			);
+			mainGroup = A50000010000000000000001;
+			packageReferences = (
+				33CF38112F746CBB0072BD61 /* XCRemoteSwiftPackageReference "SwiftTerm" */,
+			);
+			productRefGroup = A50000030000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A60000010000000000000001 /* ClaudeNotes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A70000020000000000000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000210000000000000014 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A70000010000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000010000000000000001 /* ClaudeNotesApp.swift in Sources */,
+				A10000020000000000000002 /* ContentView.swift in Sources */,
+				A10000030000000000000003 /* Note.swift in Sources */,
+				A10000040000000000000004 /* NoteFolder.swift in Sources */,
+				A10000050000000000000005 /* AIAnalysis.swift in Sources */,
+				A10000060000000000000006 /* SidebarView.swift in Sources */,
+				A10000070000000000000007 /* NoteListView.swift in Sources */,
+				A10000080000000000000008 /* NoteRow.swift in Sources */,
+				A10000090000000000000009 /* NoteEditorView.swift in Sources */,
+				A1000010000000000000000A /* EditorToolbar.swift in Sources */,
+				A1000011000000000000000B /* MarkdownPreviewView.swift in Sources */,
+				A1000012000000000000000C /* AIInsightsPanel.swift in Sources */,
+				A1000013000000000000000D /* AILoadingView.swift in Sources */,
+				A1000014000000000000000E /* SettingsView.swift in Sources */,
+				A1000015000000000000000F /* AIService.swift in Sources */,
+				A10000160000000000000010 /* AIPrompts.swift in Sources */,
+				A10000170000000000000011 /* KeychainService.swift in Sources */,
+				A10000180000000000000012 /* NoteEditorViewModel.swift in Sources */,
+				A10000190000000000000013 /* AIInsightsViewModel.swift in Sources */,
+				A1000020000000000000001A /* Date+Formatting.swift in Sources */,
+				A10000220000000000000015 /* PreviewSampleData.swift in Sources */,
+				A10000230000000000000020 /* LLMProvider.swift in Sources */,
+				A10000240000000000000021 /* LLMWebView.swift in Sources */,
+				A10000250000000000000022 /* ChatBrowserView.swift in Sources */,
+				A10000260000000000000023 /* ChatProviderListView.swift in Sources */,
+				A10000270000000000000024 /* AIChatPanel.swift in Sources */,
+				A10000280000000000000025 /* SlashCommandPopup.swift in Sources */,
+				A10000290000000000000026 /* WebChatInjector.swift in Sources */,
+				A100002A0000000000000027 /* PanguSpacing.swift in Sources */,
+				A100002B0000000000000028 /* MarkdownFormatter.swift in Sources */,
+				A100002F000000000000002C /* MarkdownRenderer.swift in Sources */,
+				A100002C0000000000000029 /* MarkdownTextView.swift in Sources */,
+				A100002D000000000000002A /* ShortcutSettings.swift in Sources */,
+				A100002E000000000000002B /* ShortcutSettingsView.swift in Sources */,
+				A1000030000000000000002D /* ClaudeTerminalView.swift in Sources */,
+				A1000031000000000000002E /* VaultSearchView.swift in Sources */,
+				A1000032000000000000002F /* TaskItem.swift in Sources */,
+				A10000330000000000000030 /* TaskExtractionService.swift in Sources */,
+				A10000340000000000000031 /* KanbanBoardView.swift in Sources */,
+				A10000350000000000000032 /* NoteVersion.swift in Sources */,
+				A10000360000000000000033 /* VersionHistoryView.swift in Sources */,
+				A10000370000000000000034 /* EditorSettings.swift in Sources */,
+				A10000380000000000000035 /* EditorSettingsView.swift in Sources */,
+				A10000390000000000000036 /* EditorStateStore.swift in Sources */,
+				A100003A00000000000019D438B9895 /* AIProviderSettings.swift in Sources */,
+				A100003A0000000000000037 /* UserPersona.swift in Sources */,
+				A100003B0000000000000038 /* PersonaView.swift in Sources */,
+				A100003C000000000000003C /* InboxModels.swift in Sources */,
+				A100003D000000000000003D /* InboxService.swift in Sources */,
+				A100003E000000000000003E /* InboxView.swift in Sources */,
+				A100003F000000000000003F /* LibraryModels.swift in Sources */,
+				A10000400000000000000040 /* FileNoteEditorView.swift in Sources */,
+				A10000410000000000000041 /* MetadataService.swift in Sources */,
+				A10000420000000000000042 /* MetadataGeneratorView.swift in Sources */,
+				A10000430000000000000043 /* OutlinePanelView.swift in Sources */,
+				A10000440000000000000044 /* ExternalSearch.swift in Sources */,
+				A10000450000000000000045 /* PlatformRewrite.swift in Sources */,
+				A10000460000000000000046 /* ExternalSearchSettingsView.swift in Sources */,
+				332EF0E02F7A44BB0074E777 /* ShortcutsHelpView.swift in Sources */,
+				A10000470000000000000047 /* PlatformRewriteSettingsView.swift in Sources */,
+				A10000480000000000000048 /* RewriteResultPanel.swift in Sources */,
+				A10000490000000000000049 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B10000010000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B10000020000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		B10000030000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ClaudeNotes/ClaudeNotes.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ClaudeNotes/Preview Content\"";
+				DEVELOPMENT_TEAM = KY46ML3QA4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claudenotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B10000040000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ClaudeNotes/ClaudeNotes.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ClaudeNotes/Preview Content\"";
+				DEVELOPMENT_TEAM = KY46ML3QA4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claudenotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A80000010000000000000001 /* Build configuration list for PBXNativeTarget "ClaudeNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10000030000000000000003 /* Debug */,
+				B10000040000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80000020000000000000002 /* Build configuration list for PBXProject "ClaudeNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10000010000000000000001 /* Debug */,
+				B10000020000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		33CF38112F746CBB0072BD61 /* XCRemoteSwiftPackageReference "SwiftTerm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/migueldeicaza/SwiftTerm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		33CF38122F746CBB0072BD61 /* SwiftTerm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33CF38112F746CBB0072BD61 /* XCRemoteSwiftPackageReference "SwiftTerm" */;
+			productName = SwiftTerm;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A90000010000000000000001 /* Project object */;
+}
