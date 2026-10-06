@@ -1,0 +1,6 @@
+# 编译好的小红书 MCP 程序（二进制，太大，不进 git）
+ClaudeNotes/xiaohongshu-login-darwin-arm64
+ClaudeNotes/xiaohongshu-mcp-darwin-arm64
+
+.DS_Store
+xcuserdata/
